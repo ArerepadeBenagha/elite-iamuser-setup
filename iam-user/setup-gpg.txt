@@ -1,0 +1,9 @@
+//// 
+To generate gpg key: https://www.igolder.com/PGP/generate-key/
+To convert to base64 encoded: https://www.base64encode.org/
+
+/////
+gpg --gen-key  # generates userid, save file as *.asc
+
+///
+export key: gpg --armor --export user-id > pubkey.asc
