@@ -109,7 +109,7 @@ resource "aws_default_security_group" "main-sg" {
   dynamic "ingress" {
     for_each = var.default_security_group_ingress
     content {
-      
+
       self             = lookup(ingress.value, "self", null)
       cidr_blocks      = compact(split(",", lookup(ingress.value, "cidr_blocks", "")))
       ipv6_cidr_blocks = compact(split(",", lookup(ingress.value, "ipv6_cidr_blocks", "")))

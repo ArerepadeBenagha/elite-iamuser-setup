@@ -16,3 +16,7 @@ output "default_security_group_id" {
   description = "The ID of the security group created by default on VPC creation"
   value       = concat(aws_vpc.main.*.default_security_group_id, [""])[0]
 }
+output "subnet_id" {
+  description = "The subnet id"
+  value       = concat(aws_subnet.main-public.*.id, [""])[0]
+}
