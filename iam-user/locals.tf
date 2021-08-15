@@ -19,7 +19,7 @@ locals {
   }
 
   application = {
-    app_name = "publicApp"
+    app_name = "publicapp"
     location = "useast2"
     alias    = "Dev"
     ec2      = "public"
