@@ -29,9 +29,9 @@ resource "aws_iam_user_policy" "eliteuseradmin" {
 }
 resource "aws_iam_user_login_profile" "eliteuseradmin_login" {
   user                    = aws_iam_user.eliteuseradmin.name
-  pgp_key                 = file("./file.gpg")
-  password_length         = 20
-  password_reset_required = false
+  pgp_key                 = "keybase:elitesolutionit"
+  password_length         = 10
+  password_reset_required = true
 }
 resource "aws_iam_user_ssh_key" "eliteuseradmin" {
   username   = aws_iam_user.eliteuseradmin.name
